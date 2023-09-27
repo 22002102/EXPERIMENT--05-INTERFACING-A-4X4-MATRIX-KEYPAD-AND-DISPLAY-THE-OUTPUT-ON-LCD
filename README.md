@@ -2,7 +2,7 @@
 NAME:SANJAY S
 REG NO:212222230132
 ```
-# EXPERIMENT--05-INTERFACING-A-4X4-MATRIX-KEYPAD-AND-DISPLAY-THE-OUTPUT-ON-LCD
+# EXPERIMENT-05 INTERFACING A 4X4 MATRIX KEYPAD AND DISPLAY THE OUTPUT ON LCD
 
 ## Aim: 
 To Interface a 4X4 matrix keypad and show the output on 16X2 LCD display to ARM controller , and simulate it in Proteus
@@ -28,7 +28,7 @@ Pin Number	Pin Name	Description
 4×4 Matrix Keypad Module Hardware Overview
 These Keypad modules are made of thin, flexible membrane material. The 4 x4 keypad module consists of 16 keys, these Keys are organized in a matrix of rows and columns. All these switches are connected to each other with a conductive trace. Normally there is no connection between rows and columns. When we will press a key, then a row and a column make contact.
 
-## Procedure : 
+
  ## LCD 16X2 
    16×2 LCD is named so because; it has 16 Columns and 2 Rows. There are a lot of combinations available like,
    8×1, 8×2, 10×2, 16×1, etc. But the most used one is the 16*2 LCD, hence we are using it here.
@@ -128,10 +128,21 @@ C2
 Jump to second line, position 2
  
 ## Procedure:
+1. Select a new STM32 Project.
+2. Select GPIO Ports
 
+         PC0 , PC1 , PC2 , PC3 , PA0 , PA1 , PA2 , PA3 , PB0 , PB1  -> Output
+   
+         PC4 , PC5 , PC7 , PC8  -> Input
+   
+4. Configure the Input Ports at Pull up Mode followed by generating the code.
+5. Build Debug and Create 'hex.file'
+6. Open a new Proteus Project.
+7. Select STM32F401RB, LCD 16*2 and Keypad.
+8. Connect  PA0 to D7 , PA1 to D6 , PA2 to D5 , PA3 to D4 , PB0 to RS , PB1 to E , PC0 to r1 , PC1 to r2 , PC2 to r3 , PC3 to r4 ,  PC4 to c1 , PC5 to c2 , PC6 to c3 and  PC7 to c4.
+9. Check the execution of the output using Run Option.
+      
 
-## CIRCUIT DIAGRAM 
- 
 
 ## STM 32 CUBE PROGRAM :
 ```

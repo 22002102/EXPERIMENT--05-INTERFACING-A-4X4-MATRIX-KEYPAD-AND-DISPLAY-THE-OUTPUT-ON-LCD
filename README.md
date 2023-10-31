@@ -53,79 +53,35 @@ There are some preset commands instructions in LCD, which we need to send to LCD
 
 Hex Code
 
-Command to LCD Instruction Register
+Clear display screen - 01
 
-0F
+Return home - 02 
 
-LCD ON, cursor ON
+Decrement cursor (shift cursor to left) - 04 
 
-01
+Increment cursor (shift cursor to right) -  06 
 
-Clear display screen
+Shift display right -  05
 
-02
+Shift display left -07 
 
-Return home
+Display ON, cursor blinking - 0E 
 
-04
+Force cursor to beginning of first line - 80 
 
-Decrement cursor (shift cursor to left)
+Force cursor to beginning of second line - C0 
 
-06
+2 lines and 5×7 matrix -  38 
 
-Increment cursor (shift cursor to right)
+Cursor line 1 position 3 -  0,2
 
-05
+Display OFF, cursor OFF - 08 
 
-Shift display right
+Jump to second line, position 1 -  C1
 
-07
+Display ON, cursor OFF - 0C
 
-Shift display left
-
-0E
-
-Display ON, cursor blinking
-
-80
-
-Force cursor to beginning of first line
-
-C0
-
-Force cursor to beginning of second line
-
-38
-
-2 lines and 5×7 matrix
-
-83
-
-Cursor line 1 position 3
-
-3C
-
-Activate second line
-
-08
-
-Display OFF, cursor OFF
-
-C1
-
-Jump to second line, position 1
-
-OC
-
-Display ON, cursor OFF
-
-C1
-
-Jump to second line, position 1
-
-C2
-
-Jump to second line, position 2
+Jump to second line, position 2 - C2
  
 ## Procedure:
 1. Select a new STM32 Project.
